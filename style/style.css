@@ -128,7 +128,7 @@ body{
 
     overflow:hidden;
 
-    background-image:url("/images/Background.png");
+    background-image:url("../images/Background.png");
     background-size:cover;
     background-position:center;
 
