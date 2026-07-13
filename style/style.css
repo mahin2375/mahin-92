@@ -128,12 +128,14 @@ body{
 
     overflow:hidden;
 
-    background-image:url("./images/Background.png");
+    background-image:url("../images/Background.png");
     background-size:cover;
     background-position:center;
 
 }
-
+.hero{
+    background: url("../images/Background.png") center center / cover no-repeat !important;
+}
 .overlay{
 
     position:absolute;
