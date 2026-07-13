@@ -684,3 +684,677 @@ font-size:54px;
 }
 
 }
+
+
+
+/*====================================================
+   GOOGLE FONT
+====================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/*====================================================
+   RESET
+====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#05070d;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:1200px;
+    max-width:92%;
+    margin:auto;
+}
+
+/*====================================================
+   TROPHY SECTION
+====================================================*/
+
+.trophy-section{
+    position:relative;
+    background:#05070d;
+    padding:120px 0;
+    overflow:hidden;
+}
+
+/* Glow */
+
+.trophy-section::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-55%,-50%);
+    width:850px;
+    height:850px;
+    background:radial-gradient(circle,
+        rgba(255,184,0,.18) 0%,
+        rgba(255,184,0,.10) 30%,
+        rgba(255,184,0,.04) 55%,
+        transparent 75%);
+    pointer-events:none;
+}
+
+/*====================================================
+   FLEX
+====================================================*/
+
+.trophy-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    position:relative;
+    z-index:5;
+}
+
+.trophy-left{
+    width:52%;
+}
+
+.trophy-right{
+    width:48%;
+}
+
+/*====================================================
+   IMAGE BOX
+====================================================*/
+
+.trophy-image-box{
+    background:#000;
+    border-radius:22px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:560px;
+    box-shadow:
+    0 35px 70px rgba(0,0,0,.45);
+    transition:.45s;
+}
+
+.trophy-image-box:hover{
+    transform:translateY(-8px);
+}
+
+.trophy-img{
+    width:63%;
+    transition:.6s ease;
+}
+
+.trophy-image-box:hover .trophy-img{
+    transform:scale(1.05);
+}
+
+/*====================================================
+   SUB TITLE
+====================================================*/
+
+.section-subtitle{
+    display:inline-block;
+    color:#ffbf18;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+/*====================================================
+   TITLE
+====================================================*/
+
+.section-title{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:82px;
+    line-height:.95;
+    font-weight:800;
+    color:#fff;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.section-title span{
+    display:block;
+    color:#ffbf18;
+    margin-top:10px;
+}
+
+/*====================================================
+   DESCRIPTION
+====================================================*/
+
+.section-description{
+    color:#d1d5db;
+    font-size:19px;
+    line-height:1.8;
+    max-width:620px;
+    margin-bottom:42px;
+}
+
+/*====================================================
+   STATS GRID
+====================================================*/
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-bottom:42px;
+}
+
+.stat-card{
+    background:#171a22;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:28px;
+    transition:.35s;
+}
+
+.stat-card:hover{
+    border-color:#ffbf18;
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.stat-icon{
+    color:#ffbf18;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.stat-card h3{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:48px;
+    font-weight:700;
+    color:#fff;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#9ca3af;
+    font-size:15px;
+}/*=========================================
+    BUTTON GROUP
+=========================================*/
+
+.button-group{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+/*=========================================
+    PRIMARY BUTTON
+=========================================*/
+
+.btn-primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    background:#ffc21c;
+    color:#111;
+    padding:18px 34px;
+    border-radius:60px;
+    font-size:18px;
+    font-weight:700;
+    transition:.35s ease;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+
+.btn-primary::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#ffffff;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+    z-index:-1;
+}
+
+.btn-primary:hover::before{
+    transform:scaleX(1);
+}
+
+.btn-primary:hover{
+    color:#111;
+    transform:translateY(-4px);
+    box-shadow:0 18px 35px rgba(255,194,28,.35);
+}
+
+.btn-primary i{
+    font-size:18px;
+}
+
+/*=========================================
+    OUTLINE BUTTON
+=========================================*/
+
+.btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px 34px;
+    border-radius:60px;
+    border:1px solid rgba(255,255,255,.18);
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    transition:.35s;
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:#111;
+    transform:translateY(-4px);
+}
+
+/*=========================================
+    IMAGE ANIMATION
+=========================================*/
+
+@keyframes trophyFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.trophy-img{
+    animation:trophyFloat 5s ease-in-out infinite;
+}
+
+/*=========================================
+    TABLET
+=========================================*/
+
+@media (max-width:991px){
+
+    .trophy-section{
+        padding:90px 0;
+    }
+
+    .trophy-wrapper{
+        flex-direction:column;
+        gap:55px;
+    }
+
+    .trophy-left,
+    .trophy-right{
+        width:100%;
+    }
+
+    .image-box,
+    .trophy-image-box{
+        min-height:450px;
+    }
+
+    .trophy-img{
+        width:50%;
+    }
+
+    .section-title{
+        font-size:64px;
+    }
+
+    .section-description{
+        max-width:100%;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+    }
+
+}
+
+/*=========================================
+    MOBILE
+=========================================*/
+
+@media (max-width:767px){
+
+    .trophy-section{
+        padding:70px 0;
+    }
+
+    .image-box,
+    .trophy-image-box{
+        min-height:340px;
+        padding:30px;
+    }
+
+    .trophy-img{
+        width:65%;
+    }
+
+    .section-title{
+        font-size:48px;
+        line-height:1;
+    }
+
+    .section-description{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat-card{
+        padding:22px;
+    }
+
+    .button-group{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+/*=========================================
+    SMALL MOBILE
+=========================================*/
+
+@media (max-width:480px){
+
+    .section-subtitle{
+        font-size:12px;
+    }
+
+    .section-title{
+        font-size:40px;
+    }
+
+    .trophy-img{
+        width:75%;
+    }
+
+    .stat-card h3{
+        font-size:40px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        padding:16px 24px;
+        font-size:16px;
+    }
+
+}/*=========================================
+    FINAL POLISH
+=========================================*/
+
+/* Smooth scrolling */
+html{
+    scroll-behavior:smooth;
+}
+
+/* Better text rendering */
+body{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
+}
+
+/*=========================================
+    PREMIUM GLOW
+=========================================*/
+
+.trophy-section::after{
+    content:"";
+    position:absolute;
+    right:-220px;
+    bottom:-220px;
+    width:520px;
+    height:520px;
+    background:radial-gradient(circle,
+        rgba(255,193,7,.18) 0%,
+        rgba(255,193,7,.08) 45%,
+        transparent 75%);
+    pointer-events:none;
+    z-index:0;
+}
+
+/*=========================================
+    IMAGE SHADOW
+=========================================*/
+
+.trophy-image-box{
+    position:relative;
+}
+
+.trophy-image-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:22px;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,0)
+    );
+    pointer-events:none;
+}
+
+.trophy-image-box::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:18px;
+    transform:translateX(-50%);
+    width:180px;
+    height:22px;
+    background:rgba(255,193,7,.22);
+    filter:blur(25px);
+    border-radius:50%;
+}
+
+/*=========================================
+    CARD EFFECT
+=========================================*/
+
+.stat-card{
+    overflow:hidden;
+    position:relative;
+}
+
+.stat-card::before{
+    content:"";
+    position:absolute;
+    left:-120%;
+    top:0;
+    width:70%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+    transition:.8s;
+}
+
+.stat-card:hover::before{
+    left:150%;
+}
+
+/*=========================================
+    ICON EFFECT
+=========================================*/
+
+.stat-icon{
+    transition:.35s;
+}
+
+.stat-card:hover .stat-icon{
+    transform:rotate(-8deg) scale(1.15);
+}
+
+/*=========================================
+    BUTTON SHINE
+=========================================*/
+
+.btn-primary{
+    overflow:hidden;
+}
+
+.btn-primary::after{
+    content:"";
+    position:absolute;
+    left:-120%;
+    top:0;
+    width:55%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+    transition:.7s;
+}
+
+.btn-primary:hover::after{
+    left:160%;
+}
+
+/*=========================================
+    TITLE ANIMATION
+=========================================*/
+
+.section-title span{
+    position:relative;
+}
+
+.section-title span::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:90px;
+    height:4px;
+    background:#ffc21c;
+    border-radius:10px;
+}
+
+/*=========================================
+    FADE ANIMATION
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.trophy-left{
+    animation:fadeUp .8s ease forwards;
+}
+
+.trophy-right{
+    animation:fadeUp 1s ease forwards;
+}
+
+/*=========================================
+    LARGE SCREEN
+=========================================*/
+
+@media(min-width:1400px){
+
+    .container{
+        max-width:1280px;
+    }
+
+    .section-title{
+        font-size:92px;
+    }
+
+    .section-description{
+        font-size:20px;
+    }
+
+}
+
+/*=========================================
+    EXTRA SMALL
+=========================================*/
+
+@media(max-width:380px){
+
+    .section-title{
+        font-size:34px;
+    }
+
+    .section-description{
+        font-size:15px;
+    }
+
+    .stat-card{
+        padding:18px;
+    }
+
+    .stat-card h3{
+        font-size:34px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        font-size:15px;
+        padding:15px 20px;
+    }
+
+    .trophy-image-box{
+        min-height:280px;
+    }
+
+    .trophy-img{
+        width:80%;
+    }
+
+}
